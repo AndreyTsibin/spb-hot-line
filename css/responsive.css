@@ -1,0 +1,390 @@
+/* ===== АДАПТИВНЫЕ СТИЛИ LENREMONT ===== */
+
+/* === БАЗОВЫЕ МЕДИА-ЗАПРОСЫ === */
+
+/* Мобильные устройства (по умолчанию) */
+/* 320px - 767px */
+
+/* === МОБИЛЬНЫЕ ИСПРАВЛЕНИЯ === */
+@media (max-width: 767px) {
+  /* Header на мобильных */
+  .header__content {
+    flex-direction: column;
+    gap: var(--spacing-3);
+    text-align: center;
+  }
+  
+  .header__logo {
+    align-items: center;
+  }
+  
+  .header__phone {
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+  
+  .header__phone-content {
+    align-items: center;
+  }
+  
+  /* Hero на мобильных */
+  .hero__phone {
+    font-size: var(--font-size-2xl);
+    padding: var(--spacing-3) var(--spacing-6);
+    margin-bottom: var(--spacing-8);
+  }
+  
+  .hero__services {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-4);
+  }
+  
+  .service-card {
+    padding: var(--spacing-4);
+  }
+  
+  .service-card__icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .service-card__title {
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-tight);
+  }
+  
+  /* Pricing tabs на мобильных */
+  .tabs__nav {
+    flex-direction: column;
+    gap: var(--spacing-1);
+  }
+  
+  .tabs__btn {
+    min-width: auto;
+    font-size: var(--font-size-xs);
+  }
+  
+  /* Hotline на мобильных */
+  .hotline {
+    padding: var(--spacing-12) 0;
+  }
+  
+  .hotline__title {
+    font-size: var(--font-size-xl);
+  }
+  
+  .hotline__phone {
+    font-size: var(--font-size-2xl);
+    padding: var(--spacing-4) var(--spacing-6);
+  }
+  
+  /* FAQ на мобильных */
+  .faq__question {
+    font-size: var(--font-size-base);
+    padding: var(--spacing-4);
+  }
+  
+  .faq__answer p {
+    padding: 0 var(--spacing-4) var(--spacing-4);
+  }
+  
+  /* Contact на мобильных */
+  .contact__content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+    text-align: center;
+  }
+  
+  .contact__title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .contact__item {
+    justify-content: center;
+    font-size: var(--font-size-base);
+  }
+  
+  /* Contact Master на мобильных */
+  .contact-master__title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .contact-master__subtitle {
+    font-size: var(--font-size-base);
+  }
+  
+  .contact-master__cta {
+    flex-direction: column;
+    gap: var(--spacing-4);
+  }
+  
+  .phone-arrow {
+    font-size: var(--font-size-4xl);
+    transform: rotate(0deg);
+  }
+}
+
+/* === ПЛАНШЕТЫ === */
+/* 768px - 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Header на планшетах */
+  .header__content {
+    gap: var(--spacing-6);
+  }
+  
+  /* Hero на планшетах */
+  .hero__services {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-6);
+  }
+  
+  /* Tabs на планшетах */
+  .tabs__nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .tabs__btn {
+    flex: 0 0 calc(33.333% - var(--spacing-2));
+    min-width: auto;
+  }
+  
+  /* Contact на планшетах */
+  .map-image {
+    height: 250px;
+  }
+}
+
+/* === ДЕСКТОП === */
+/* 1024px и выше */
+@media (min-width: 1024px) {
+  /* Увеличение отступов секций на больших экранах */
+  .section-padding {
+    padding-top: calc(var(--section-padding-lg) * 1.2);
+    padding-bottom: calc(var(--section-padding-lg) * 1.2);
+  }
+  
+  /* Header на десктопе */
+  .header {
+    padding: var(--spacing-6) 0;
+  }
+  
+  .header__logo-img {
+    height: 48px;
+  }
+  
+  /* Hero на десктопе */
+  .hero__services {
+    margin-top: var(--spacing-16);
+  }
+  
+  /* Hotline на десктопе */
+  .hotline {
+    padding: var(--spacing-32) 0;
+  }
+  
+  /* FAQ на десктопе */
+  .faq__list {
+    max-width: 900px;
+  }
+  
+  /* Testimonials на десктопе */
+  .testimonials__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--spacing-8);
+  }
+  
+  /* Contact на десктопе */
+  .map-image {
+    height: 400px;
+  }
+}
+
+/* === ШИРОКИЕ ЭКРАНЫ === */
+/* 1280px и выше */
+@media (min-width: 1280px) {
+  .container {
+    padding-left: var(--spacing-8);
+    padding-right: var(--spacing-8);
+  }
+  
+  /* Hero услуги в одну строку */
+  .hero__services {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  
+  /* Увеличенные отступы */
+  .section-padding {
+    padding-top: calc(var(--section-padding-lg) * 1.5);
+    padding-bottom: calc(var(--section-padding-lg) * 1.5);
+  }
+}
+
+/* === ОЧЕНЬ ШИРОКИЕ ЭКРАНЫ === */
+/* 1536px и выше */
+@media (min-width: 1536px) {
+  .hero__services {
+    grid-template-columns: repeat(6, minmax(0, 200px));
+    justify-content: center;
+  }
+  
+  .testimonials__list {
+    grid-template-columns: repeat(2, minmax(0, 500px));
+    justify-content: center;
+  }
+}
+
+/* === УТИЛИТЫ ДЛЯ СКРЫТИЯ/ПОКАЗА НА РАЗНЫХ УСТРОЙСТВАХ === */
+
+/* Скрыть на мобильных */
+@media (max-width: 767px) {
+  .hidden-mobile { display: none !important; }
+}
+
+/* Скрыть на планшетах */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hidden-tablet { display: none !important; }
+}
+
+/* Скрыть на десктопе */
+@media (min-width: 1024px) {
+  .hidden-desktop { display: none !important; }
+}
+
+/* Показать только на мобильных */
+.mobile-only {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  .mobile-only { display: block !important; }
+  .mobile-only.flex { display: flex !important; }
+  .mobile-only.grid { display: grid !important; }
+  .mobile-only.inline { display: inline !important; }
+  .mobile-only.inline-block { display: inline-block !important; }
+}
+
+/* Показать только на планшетах */
+.tablet-only {
+  display: none !important;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .tablet-only { display: block !important; }
+  .tablet-only.flex { display: flex !important; }
+  .tablet-only.grid { display: grid !important; }
+}
+
+/* Показать только на десктопе */
+.desktop-only {
+  display: none !important;
+}
+
+@media (min-width: 1024px) {
+  .desktop-only { display: block !important; }
+  .desktop-only.flex { display: flex !important; }
+  .desktop-only.grid { display: grid !important; }
+}
+
+/* === АДАПТИВНОСТЬ ТЕКСТА === */
+@media (max-width: 767px) {
+  .responsive-text {
+    font-size: var(--font-size-sm) !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-text {
+    font-size: var(--font-size-lg) !important;
+  }
+}
+
+/* === АДАПТИВНАЯ СЕТКА === */
+.responsive-grid {
+  display: grid;
+  gap: var(--spacing-4);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .responsive-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-8);
+  }
+}
+
+/* === PRINT СТИЛИ === */
+@media print {
+  * {
+    background: none !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  
+  .header,
+  .btn,
+  .tabs__nav,
+  .contact-master {
+    display: none !important;
+  }
+  
+  .section-padding {
+    padding: var(--spacing-4) 0 !important;
+  }
+  
+  .container {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+  
+  .hero__phone,
+  .hotline__phone {
+    border: 2px solid black !important;
+    background: none !important;
+    color: black !important;
+  }
+}
+
+/* === ВЫСОКАЯ КОНТРАСТНОСТЬ === */
+@media (prefers-contrast: high) {
+  :root {
+    --color-text-secondary: #000000;
+    --color-border: #000000;
+  }
+  
+  .btn {
+    border: 2px solid currentColor;
+  }
+  
+  .service-card {
+    border: 2px solid var(--color-border);
+  }
+}
+
+/* === УМЕНЬШЕННОЕ ДВИЖЕНИЕ === */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .service-card:hover,
+  .btn:hover,
+  .hero__phone:hover,
+  .hotline__phone:hover {
+    transform: none !important;
+  }
+}
