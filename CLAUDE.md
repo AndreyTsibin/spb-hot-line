@@ -24,8 +24,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ```
 ├── index.html                    # Главный HTML файл со всеми секциями
 ├── css/
-│   ├── variables.css            # CSS переменные (цвета, шрифты, изображения)
-│   ├── base.css                 # Базовые стили и CSS reset
+│   ├── base.css                 # Базовые стили, CSS переменные и CSS reset
 │   ├── header.css               # Стили шапки сайта
 │   ├── hero.css                 # Стили главной секции
 │   ├── pricing.css              # Стили секции цен с табами
@@ -42,8 +41,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### CSS архитектура
 - **Модульная организация**: каждая секция имеет свой CSS файл
-- **Последовательность подключения**: variables.css → base.css → компоненты → responsive.css
-- **CSS переменные**: централизованы в variables.css для цветов, типографики, размеров
+- **Последовательность подключения**: base.css → компоненты → responsive.css
+- **CSS переменные**: централизованы в base.css для цветов, типографики, размеров
 - **Именование классов**: БЭМ-подобная методология (block__element--modifier)
 
 ### Проверка кода

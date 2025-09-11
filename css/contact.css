@@ -6,6 +6,14 @@
 Стили для секции с контактной информацией:
 - Синий фон
 - Левая часть - контактные данные:
+
+ВАЖНО: Используйте CSS переменные и классы из base.css:
+- Цвета: var(--color-section-bg), var(--color-text-white)
+- Изображения: var(--image-contact-map)
+- Кнопки: .contact__cta-button (базовые стили)
+- Контейнеры: .contact__container
+- Иконки: .contact__icon (базовые стили)
+- Ссылки: базовые стили для a[href^="tel:"], a[href^="mailto:"]
   * Телефон +7 (812) 219-91-44
   * Адрес в СПб
   * Email info@lentehrem.ru
