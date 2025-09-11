@@ -122,7 +122,7 @@
 }
 
 .header__phone-number:hover {
-    opacity: 0.8;
+    color: var(--color-phone-hover);
 }
 
 .header__phone-subtitle {

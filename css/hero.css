@@ -192,6 +192,6 @@ a.hero__phone[href^="tel:"]:hover {
 .hero__service-text {
     font-size: 13px;
     font-weight: 500;
-    color: #2481CC;
+    color: var(--color-link);
     line-height: 1.3;
 }
