@@ -67,7 +67,7 @@
 
 .faq__item {
     background: var(--color-bg-primary);
-    border-radius: 16px;
+    border-radius: var(--button-border-radius);
     margin-bottom: 16px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }

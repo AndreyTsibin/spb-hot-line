@@ -38,7 +38,10 @@
     
     /* Фоновые цвета */
     --color-bg-primary: #ffffff;       
-    --color-bg-hero: #F5F5F8;          /* Светло-серый фон для hero и faq секций */       
+    --color-bg-hero: #F5F5F8;          /* Светло-серый фон для hero и faq секций */
+    
+    /* Радиусы скругления */
+    --button-border-radius: 3px;      /* Основное скругление для кнопок */
     
     /* Изображения */
     --image-logo: url('../images/logo-lenremont.svg');

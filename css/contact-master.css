@@ -1,6 +1,6 @@
 /*
 ===========================================
-ФИНАЛЬНАЯ СЕКЦИЯ CTA (CONTACT-MASTER)
+СЕКЦИЯ CTA (CONTACT-MASTER)
 ===========================================
 
 Стили для последней секции с призывом к действию:
@@ -26,3 +26,63 @@
 .contact-master__icon - иконка телефона
 
 */
+
+.contact-master {
+    background-color: var(--color-section-bg);
+    padding: 80px 0;
+    color: var(--color-text-white);
+    text-align: center;
+}
+
+.contact-master__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-master__title {
+    color: var(--color-text-white);
+}
+
+.contact-master__subtitle {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0 0 40px 0;
+    opacity: 0.9;
+}
+
+.contact-master__action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-master__icon {
+    width: 64px;
+    height: 64px;
+    fill: var(--color-text-white);
+    opacity: 0.8;
+}
+
+.contact-master__button {
+    background-color: var(--color-header-button);
+    color: var(--color-text-white);
+    padding: 20px 48px;
+    border-radius: var(--button-border-radius);
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.contact-master__button:hover {
+    background-color: var(--color-header-button-hover);
+    color: var(--color-text-white);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(230, 57, 70, 0.3);
+}

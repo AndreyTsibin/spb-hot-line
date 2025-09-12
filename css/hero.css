@@ -138,9 +138,9 @@ a.hero__phone[href^="tel:"]:hover {
     gap: 1rem;
     background-color: var(--color-bg-primary);
     width: 145px;
-    min-height: 150px;
+    min-height: 145px;
     padding: 1.2rem 1rem;
-    border-radius: 12px;
+    border-radius: var(--button-border-radius);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     flex: 0 0 auto;
 }
