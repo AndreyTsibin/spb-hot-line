@@ -17,6 +17,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     // =8F80;870F8O pricing B01>2
     initPricingTabs();
+    // =8F80;870F8O FAQ 0::>@45>=0
+    initFAQAccordion();
 });
 
 function initPricingTabs() {
@@ -94,9 +96,95 @@ function smoothScrollTo(targetId) {
     }
 }
 
+// ===================================================
+// FAQ АККОРДЕОН
+// ===================================================
+
+function initFAQAccordion() {
+    // Получаем все кнопки вопросов FAQ
+    const faqQuestions = document.querySelectorAll('.faq__question');
+    
+    // Если элементы не найдены, выходим
+    if (faqQuestions.length === 0) {
+        console.warn('FAQ questions not found');
+        return;
+    }
+    
+    // Добавляем обработчик клика для каждой кнопки
+    faqQuestions.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Получаем родительский элемент .faq__item
+            const faqItem = this.closest('.faq__item');
+            
+            if (!faqItem) {
+                console.warn('FAQ item not found');
+                return;
+            }
+            
+            // Проверяем, активен ли элемент
+            const isActive = faqItem.classList.contains('active');
+            
+            // Закрываем все открытые FAQ
+            closeAllFAQ();
+            
+            // Если элемент не был активен, открываем его
+            if (!isActive) {
+                openFAQ(faqItem);
+            }
+        });
+    });
+    
+    console.log('FAQ accordion initialized successfully');
+}
+
+function openFAQ(faqItem) {
+    // Добавляем класс active
+    faqItem.classList.add('active');
+    
+    // Получаем элемент ответа
+    const answer = faqItem.querySelector('.faq__answer');
+    
+    if (answer) {
+        // Получаем высоту контента
+        const scrollHeight = answer.scrollHeight;
+        
+        // Устанавливаем max-height равную высоте контента
+        answer.style.maxHeight = scrollHeight + 'px';
+    }
+}
+
+function closeFAQ(faqItem) {
+    // Убираем класс active
+    faqItem.classList.remove('active');
+    
+    // Получаем элемент ответа
+    const answer = faqItem.querySelector('.faq__answer');
+    
+    if (answer) {
+        // Устанавливаем max-height в 0
+        answer.style.maxHeight = '0px';
+    }
+}
+
+function closeAllFAQ() {
+    // Получаем все активные FAQ элементы
+    const activeFAQItems = document.querySelectorAll('.faq__item.active');
+    
+    // Закрываем каждый активный элемент
+    activeFAQItems.forEach(item => {
+        closeFAQ(item);
+    });
+}
+
 // -:A?>@B DC=:F89 4;O 2>7<>6=>3> 8A?>;L7>20=8O 2 4@C38E A:@8?B0E
 window.LENREMONT = {
     initPricingTabs: initPricingTabs,
     switchTab: switchTab,
-    smoothScrollTo: smoothScrollTo
+    smoothScrollTo: smoothScrollTo,
+    initFAQAccordion: initFAQAccordion,
+    openFAQ: openFAQ,
+    closeFAQ: closeFAQ,
+    closeAllFAQ: closeAllFAQ
 };
