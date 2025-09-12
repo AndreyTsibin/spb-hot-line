@@ -28,3 +28,128 @@
 .pricing__item - одна услуга
 
 */
+
+/* ===========================================
+   СЕКЦИЯ ЦЕН - ОСНОВНЫЕ СТИЛИ
+   =========================================== */
+
+.pricing {
+    padding: 4rem 0;
+    background-color: var(--color-bg-primary);
+}
+
+/* Заголовок секции */
+.pricing__title {
+    text-align: center;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Подзаголовок секции */
+.pricing__subtitle {
+    text-align: center;
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    color: var(--color-text-secondary);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.pricing__subtitle strong {
+    color: var(--color-text-primary);
+    font-weight: 600;
+}
+
+/* ===========================================
+   ТАБЫ-НАВИГАЦИЯ
+   =========================================== */
+
+.pricing__tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    justify-content: center;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.pricing__tab {
+    background-color: #e5e5e5;
+    color: var(--color-text-secondary);
+    border: none;
+    padding: 0.75rem 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #d0d0d0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pricing__tab:last-child {
+    border-right: none;
+}
+
+.pricing__tab:hover {
+    background-color: #d0d0d0;
+    color: var(--color-text-primary);
+}
+
+.pricing__tab--active {
+    background-color: var(--color-section-bg);
+    color: var(--color-text-white);
+    font-weight: 600;
+}
+
+.pricing__tab--active:hover {
+    background-color: var(--color-section-bg);
+    color: var(--color-text-white);
+}
+
+/* Адаптивность табов */
+@media (max-width: 768px) {
+    .pricing__tabs {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .pricing__tab {
+        border-right: none;
+        border-bottom: 1px solid #d0d0d0;
+        padding: 1rem 0.5rem;
+        white-space: normal;
+        text-overflow: unset;
+        overflow: visible;
+    }
+    
+    .pricing__tab:last-child {
+        border-bottom: none;
+    }
+}
+
+@media (min-width: 640px) {
+    .pricing__tab {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .pricing__tab {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+    }
+}
