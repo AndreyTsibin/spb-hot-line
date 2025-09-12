@@ -143,3 +143,164 @@
         font-size: 1rem;
     }
 }
+
+/* ===========================================
+   КОНТЕНТ ТАБОВ
+   =========================================== */
+
+.pricing__content {
+    margin-top: 2rem;
+}
+
+.pricing__tab-content {
+    display: none;
+}
+
+.pricing__tab-content--active {
+    display: block;
+}
+
+/* ===========================================
+   КАТЕГОРИИ УСЛУГ
+   =========================================== */
+
+.pricing__categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pricing__category {
+    background-color: transparent;
+}
+
+.pricing__category-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-section-bg);
+}
+
+/* ===========================================
+   СПИСОК УСЛУГ
+   =========================================== */
+
+.pricing__items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+/* ===========================================
+   ОТДЕЛЬНЫЕ УСЛУГИ
+   =========================================== */
+
+.pricing__item {
+    display: block;
+    padding: 1rem;
+    border: 1px solid #e5e5e5;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.pricing__item:hover {
+    background-color: var(--color-bg-hero);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: var(--color-section-bg);
+}
+
+.pricing__item:last-child {
+    margin-bottom: 0;
+}
+
+.pricing__item-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.pricing__item-price {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    white-space: nowrap;
+}
+
+.pricing__item-description {
+    font-size: 0.875rem;
+    color: var(--color-text-tertiary);
+    line-height: 1.5;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+/* ===========================================
+   АДАПТИВНОСТЬ ДЛЯ КОНТЕНТА
+   =========================================== */
+
+@media (max-width: 768px) {
+    .pricing__categories {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .pricing__category-title {
+        font-size: 1.375rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .pricing__items {
+        gap: 0.2rem;
+    }
+    
+    .pricing__item {
+        padding: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .pricing__item-title {
+        font-size: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+    
+    .pricing__item-price {
+        font-size: 1rem;
+    }
+    
+    .pricing__item-description {
+        font-size: 0.8125rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .pricing__category-title {
+        font-size: 1.625rem;
+    }
+    
+    .pricing__item-title {
+        font-size: 1.25rem;
+    }
+    
+    .pricing__item-price {
+        font-size: 1.25rem;
+    }
+    
+    .pricing__item-description {
+        font-size: 0.9375rem;
+    }
+}

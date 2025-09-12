@@ -28,12 +28,14 @@
     /* Цвета текста */
     --color-text-primary: #1a1a1a;     
     --color-text-secondary: #333333;   
+    --color-text-tertiary: #818181;    /* Светло-серый для описаний */
     --color-text-white: #ffffff;       
     
     /* Цвета ссылок */
     --color-link: #0066cc;             
     --color-link-hover: #0052a3;       
     --color-phone-hover: #F5F5F8;
+    
     /* Фоновые цвета */
     --color-bg-primary: #ffffff;       
     --color-bg-hero: #F5F5F8;          /* Светло-серый фон для hero и faq секций */       
