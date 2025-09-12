@@ -20,3 +20,46 @@
 .hotline__phone - номер телефона-кнопка
 
 */
+
+.hotline {
+    background-color: var(--color-section-bg);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.hotline__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.hotline__title {
+    color: var(--color-text-white);
+    margin-bottom: 2rem;
+}
+
+.hotline__phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--color-header-button);
+    color: var(--color-text-white);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.hotline__phone-icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+.hotline__phone:hover {
+    background-color: var(--color-header-button-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(230, 57, 70, 0.3);
+}
