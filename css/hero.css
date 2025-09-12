@@ -81,11 +81,8 @@
 }
 
 .hero__subtitle {
-    font-size: 34px;
-    font-weight: 700;
-    color: var(--color-text-primary);
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
+    /* Базовые стили h2 применяются из base.css */
+    margin-bottom: 1.5rem; /* Тонкая настройка отступа для hero секции */
 }
 
 a.hero__phone[href^="tel:"] {
