@@ -2,24 +2,6 @@
 ===========================================
 СЕКЦИЯ ОТЗЫВОВ (TESTIMONIALS)
 ===========================================
-
-Стили для секции с отзывами клиентов:
-- Заголовок и описание слева
-- Рейтинг Яндекс (4,9 из 5) справа
-- Карточки отзывов:
-
-ВАЖНО: Используйте CSS переменные и классы из base.css:
-- Цвета: var(--color-*)
-- Изображения: var(--image-testimonials-yandex-logo), var(--image-testimonial-avatar-*)
-- Контейнеры: .testimonials__container
-- Типографика: h2 (базовые стили)
-- Фоновые изображения: базовые стили .testimonials__avatar-image
-  * Аватар клиента
-  * Имя, звездочки, дата
-  * Текст отзыва
-- 2 отзыва от Марины и Александра
-- Адаптивная верстка
-
 */
 
 /* Основная секция отзывов */
@@ -181,75 +163,9 @@
     color: var(--color-text-secondary);
 }
 
-/* Адаптивность для планшетов */
-@media (max-width: 1024px) {
-    .testimonials {
-        padding: 50px 0;
-    }
+/* Медиазапросы для планшетов перенесены в responsive.css */
 
-    .testimonials__container {
-        padding: 0 16px;
-    }
-
-    .testimonials__header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 30px;
-        margin-bottom: 30px;
-    }
-
-    .testimonials__title {
-        font-size: 2rem;
-    }
-
-    .testimonials__description {
-        font-size: 1rem;
-    }
-
-    .testimonials__list {
-        gap: 20px;
-    }
-
-    .testimonials__slide {
-        gap: 20px;
-        padding: 0 10px;
-    }
-}
-
-/* Адаптивность для мобильных устройств */
-@media (max-width: 640px) {
-    .testimonials {
-        padding: 40px 0;
-    }
-
-    .testimonials__title {
-        font-size: 1.75rem;
-    }
-
-    .testimonials__score {
-        font-size: 2.5rem;
-    }
-
-    .testimonials__list {
-        gap: 16px;
-    }
-
-    .testimonials__slide {
-        grid-template-columns: 1fr;
-        gap: 16px;
-        padding: 0 8px;
-    }
-
-    .testimonials__item {
-        padding: 20px;
-    }
-
-    .testimonials__yandex-logo {
-        width: 80px;
-        height: 32px;
-    }
-}
+/* Медиазапросы для мобильных устройств перенесены в responsive.css */
 
 /* Навигация карусели */
 .testimonials__navigation {
@@ -314,20 +230,4 @@
     opacity: 0.8;
 }
 
-/* Адаптивность для мобильных устройств */
-@media (max-width: 640px) {
-    .testimonials__navigation {
-        margin-top: 24px;
-        gap: 12px;
-    }
-
-    .testimonials__arrow {
-        width: 40px;
-        height: 40px;
-    }
-
-    .testimonials__arrow svg {
-        width: 20px;
-        height: 20px;
-    }
-}
+/* Медиазапросы для навигации перенесены в responsive.css */

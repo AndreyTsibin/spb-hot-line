@@ -2,15 +2,6 @@
 ===========================================
 БАЗОВЫЕ СТИЛИ И СБРОС CSS
 ===========================================
-
-Этот файл содержит:
-- CSS переменные
-- CSS Reset/Normalize
-- Базовые стили для всех элементов
-- Общие классы-утилиты
-- Стили типографики (h1-h6, p, a)
-- Основные стили ссылок и кнопок
-
 */
 
 /* ===========================================
@@ -261,28 +252,4 @@ a:focus {
     padding: 0 1rem;
 }
 
-@media (min-width: 640px) {
-    .header__container,
-    .hero__container,
-    .pricing__container,
-    .hotline__container,
-    .faq__container,
-    .testimonials__container,
-    .contact__container,
-    .contact-master__container {
-        padding: 0 2rem;
-    }
-}
-
-@media (min-width: 1024px) {
-    .header__container,
-    .hero__container,
-    .pricing__container,
-    .hotline__container,
-    .faq__container,
-    .testimonials__container,
-    .contact__container,
-    .contact-master__container {
-        padding: 0 3rem;
-    }
-}
+/* Медиазапросы перенесены в responsive.css */
