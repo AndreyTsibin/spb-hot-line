@@ -109,22 +109,12 @@
     opacity: 0.8;
 }
 
+/* Модификатор кнопки для CTA в контактах */
 .contact__cta-button {
-    background-color: var(--color-main-button);
-    color: var(--color-text-primary);
     padding: 16px 32px;
-    border-radius: var(--button-border-radius);
     font-size: 16px;
-    font-weight: 600;
-    text-decoration: none;
-    text-align: center;
-    transition: background-color 0.3s ease, transform 0.3s ease;
     max-width: 280px;
-}
-
-.contact__cta-button:hover {
-    background-color: var(--color-main-button-hover);
-    transform: translateY(-2px);
+    text-transform: none;
 }
 
 /* Правая часть - карта */

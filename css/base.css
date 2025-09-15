@@ -211,6 +211,40 @@ a:focus {
 
 
 /* ===========================================
+   КНОПКИ
+   =========================================== */
+
+.btn {
+    background-color: var(--color-header-button);
+    color: var(--color-text-white);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    border-radius: var(--button-border-radius);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(230, 57, 70, 0.3);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--color-header-button-hover);
+    box-shadow: 0 4px 12px rgba(230, 57, 70, 0.4);
+    transform: translateY(-1px);
+    color: var(--color-text-white);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* ===========================================
    КОНТЕЙНЕРЫ
    =========================================== */
 

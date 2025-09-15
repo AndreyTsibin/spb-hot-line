@@ -63,26 +63,3 @@
     fill: var(--color-text-white);
     opacity: 0.8;
 }
-
-.contact-master__button {
-    background-color: var(--color-header-button);
-    color: var(--color-text-white);
-    padding: 20px 48px;
-    border-radius: var(--button-border-radius);
-    font-size: 20px;
-    font-weight: 700;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
-    display: inline-block;
-}
-
-.contact-master__button:hover {
-    background-color: var(--color-header-button-hover);
-    color: var(--color-text-white);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(230, 57, 70, 0.3);
-}

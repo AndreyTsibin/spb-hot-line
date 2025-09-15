@@ -38,28 +38,9 @@
     margin-bottom: 2rem;
 }
 
-.hotline__phone {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background-color: var(--color-header-button);
-    color: var(--color-text-white);
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-decoration: none;
-    padding: 1rem 2rem;
-    border-radius: var(--button-border-radius);
-    transition: all 0.3s ease;
-}
-
 .hotline__phone-icon {
     width: 24px;
     height: 24px;
+    margin-right: 10px;
     fill: currentColor;
-}
-
-.hotline__phone:hover {
-    background-color: var(--color-header-button-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(230, 57, 70, 0.3);
 }
