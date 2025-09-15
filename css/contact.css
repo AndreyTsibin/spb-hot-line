@@ -2,33 +2,7 @@
 ===========================================
 СЕКЦИЯ КОНТАКТОВ (CONTACT)
 ===========================================
-
-Стили для секции с контактной информацией:
-- Синий фон
-- Левая часть - контактные данные:
-
-ВАЖНО: Используйте CSS переменные и классы из base.css:
-- Цвета: var(--color-section-bg), var(--color-text-white)
-- Изображения: var(--image-contact-map)
-- Кнопки: .contact__cta-button (базовые стили)
-- Контейнеры: .contact__container (базовые стили)
-- Иконки: .contact__icon (базовые стили)
-- Ссылки: базовые стили для a[href^="tel:"], a[href^="mailto:"]
-  * Телефон +7 (812) 219-91-44
-  * Адрес в СПб
-  * Email info@lentehrem.ru
-  * Режим работы
-  * Кнопка "Бесплатная консультация"
-- Правая часть - карта Яндекс:
-  * Информация о выезде
-  * Интерактивная карта
-- Адаптивная верстка
-
 */
-
-/* ===========================================
-   СЕКЦИЯ КОНТАКТОВ
-   =========================================== */
 
 .contact {
     background-color: var(--color-section-bg);
@@ -44,6 +18,8 @@
     grid-template-columns: 1fr 1fr;
     gap: 80px;
     align-items: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Левая часть - контактная информация */
@@ -156,6 +132,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    box-sizing: border-box;
 }
 
 .contact__map-image {

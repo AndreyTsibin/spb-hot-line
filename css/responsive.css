@@ -31,6 +31,97 @@
 /* Базовые контейнеры наследуются из base.css */
 
 /* ===========================================
+   ОЧЕНЬ МАЛЕНЬКИЕ ЭКРАНЫ: 320-375PX
+   =========================================== */
+
+@media (min-width: 320px) and (max-width: 375px) {
+    /* Hero секция - сетка услуг */
+    .hero__services {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .hero__service {
+        padding: 16px;
+        gap: 12px;
+        width: 136px;
+    }
+
+    .hero__service-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .hero__service-name {
+        font-size: 12px;
+    }
+
+    /* Testimonials секция - исправление прокрутки */
+    .testimonials__list {
+        padding-right: 40px;
+    }
+
+    .testimonials__slide {
+        padding: 0 10px;
+    }
+}
+
+/* ===========================================
+   МОБИЛЬНЫЕ: ДО 640PX
+   =========================================== */
+
+@media (max-width: 639px) {
+    /* Header секция */
+    .header__container {
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        gap: 16px;
+        padding: 0 1rem;
+    }
+
+    .header__logo {
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .header__contact {
+        align-items: center;
+    }
+
+    .header__phone-subtitle {
+        text-align: center;
+    }
+
+    .header__location {
+        justify-content: center;
+    }
+
+    .header__logo-image {
+        width: 192px;
+        height: 32px;
+        background-position: center center;
+    }
+
+    .header__phone-number,
+    a.header__phone-number[href^="tel:"] {
+        font-size: 25px !important;
+    }
+
+    .hero__phone,
+    a.hero__phone[href^="tel:"] {
+        font-size: 25px !important;
+        margin-bottom: 4rem;
+    }
+
+    .header__cta-button {
+        font-size: 12px;
+        padding: 10px 20px;
+    }
+}
+
+/* ===========================================
    ПЛАНШЕТЫ: ОТ 640PX
    =========================================== */
 
@@ -47,6 +138,7 @@
         padding: 0 2rem;
     }
 
+
     /* Pricing секция */
     .pricing__tab {
         padding: 0.75rem 1rem;
@@ -59,10 +151,38 @@
    =========================================== */
 
 @media (max-width: 768px) {
-    /* FAQ секция */
-    .faq {
+    /* Все секции - унифицированные отступы 60px */
+    .hero,
+    .pricing,
+    .hotline,
+    .faq,
+    .testimonials,
+    .contact,
+    .contact-master {
         padding: 60px 0;
     }
+
+    .contact__container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 0 16px;
+    }
+
+    .contact__map-container {
+        height: 280px;
+    }
+
+    .contact__phone {
+        font-size: 20px;
+    }
+
+    .contact__address,
+    .contact__hours,
+    .contact__email {
+        font-size: 16px;
+    }
+
+    /* FAQ секция */
 
     .faq__container {
         padding: 0 16px;
@@ -152,9 +272,15 @@
    =========================================== */
 
 @media (min-width: 768px) {
-    /* Hero секция */
-    .hero {
-        padding: 5rem 0;
+    /* Все секции - унифицированные отступы 100px */
+    .hero,
+    .pricing,
+    .hotline,
+    .faq,
+    .testimonials,
+    .contact,
+    .contact-master {
+        padding: 100px 0;
     }
 
     .hero__title {
@@ -193,9 +319,6 @@
     }
 
     /* Hero секция */
-    .hero {
-        padding: 6rem 0;
-    }
 
     .hero__service-icon {
         width: 90px;
@@ -226,14 +349,11 @@
 }
 
 /* ===========================================
-   ПЛАНШЕТЫ: ДО 1024PX
+   ПЛАНШЕТЫ: ДО 768PX
    =========================================== */
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     /* Testimonials секция */
-    .testimonials {
-        padding: 50px 0;
-    }
 
     .testimonials__container {
         padding: 0 16px;
@@ -271,12 +391,10 @@
 
 @media (max-width: 640px) {
     /* Testimonials секция */
-    .testimonials {
-        padding: 40px 0;
-    }
 
     .testimonials__title {
         font-size: 1.75rem;
+        text-align: center;
     }
 
     .testimonials__score {
@@ -298,8 +416,8 @@
     }
 
     .testimonials__yandex-logo {
-        width: 80px;
-        height: 32px;
+        width: 170px;
+        height: 40px;
     }
 
     .testimonials__navigation {
