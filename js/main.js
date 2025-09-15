@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initPricingTabs();
     // =8F80;870F8O FAQ 0::>@45>=0
     initFAQAccordion();
+    // =8F80;870F8O :0@CA5;8 >B7K2>2
+    initTestimonialsCarousel();
 });
 
 function initPricingTabs() {
@@ -178,6 +180,101 @@ function closeAllFAQ() {
     });
 }
 
+// ===================================================
+// КАРУСЕЛЬ ОТЗЫВОВ
+// ===================================================
+
+function initTestimonialsCarousel() {
+    const carousel = document.querySelector('.testimonials__carousel');
+    const list = document.querySelector('.testimonials__list');
+    const slides = document.querySelectorAll('.testimonials__slide');
+    const prevButton = document.querySelector('.testimonials__arrow--prev');
+    const nextButton = document.querySelector('.testimonials__arrow--next');
+    const indicators = document.querySelectorAll('.testimonials__indicator');
+
+    // Если элементы не найдены, выходим
+    if (!carousel || !list || slides.length === 0) {
+        console.warn('Testimonials carousel elements not found');
+        return;
+    }
+
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+
+    // Функция обновления карусели
+    function updateCarousel() {
+        const translateX = -currentSlide * 100;
+        list.style.transform = `translateX(${translateX}%)`;
+
+        // Обновляем индикаторы
+        indicators.forEach((indicator, index) => {
+            indicator.classList.toggle('testimonials__indicator--active', index === currentSlide);
+        });
+
+        // Обновляем состояние кнопок
+        if (prevButton) {
+            prevButton.disabled = currentSlide === 0;
+        }
+        if (nextButton) {
+            nextButton.disabled = currentSlide === totalSlides - 1;
+        }
+    }
+
+    // Функция перехода к следующему слайду
+    function nextSlide() {
+        if (currentSlide < totalSlides - 1) {
+            currentSlide++;
+            updateCarousel();
+        }
+    }
+
+    // Функция перехода к предыдущему слайду
+    function prevSlide() {
+        if (currentSlide > 0) {
+            currentSlide--;
+            updateCarousel();
+        }
+    }
+
+    // Функция перехода к конкретному слайду
+    function goToSlide(slideIndex) {
+        if (slideIndex >= 0 && slideIndex < totalSlides) {
+            currentSlide = slideIndex;
+            updateCarousel();
+        }
+    }
+
+    // Обработчики событий для кнопок
+    if (prevButton) {
+        prevButton.addEventListener('click', prevSlide);
+    }
+
+    if (nextButton) {
+        nextButton.addEventListener('click', nextSlide);
+    }
+
+    // Обработчики событий для индикаторов
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            goToSlide(index);
+        });
+    });
+
+    // Инициализация
+    updateCarousel();
+
+    console.log('Testimonials carousel initialized successfully');
+
+    // Возвращаем объект с методами для внешнего использования
+    return {
+        nextSlide,
+        prevSlide,
+        goToSlide,
+        getCurrentSlide: () => currentSlide,
+        getTotalSlides: () => totalSlides
+    };
+}
+
 // -:A?>@B DC=:F89 4;O 2>7<>6=>3> 8A?>;L7>20=8O 2 4@C38E A:@8?B0E
 window.LENREMONT = {
     initPricingTabs: initPricingTabs,
@@ -186,5 +283,6 @@ window.LENREMONT = {
     initFAQAccordion: initFAQAccordion,
     openFAQ: openFAQ,
     closeFAQ: closeFAQ,
-    closeAllFAQ: closeAllFAQ
+    closeAllFAQ: closeAllFAQ,
+    initTestimonialsCarousel: initTestimonialsCarousel
 };

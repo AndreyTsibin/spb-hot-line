@@ -28,3 +28,307 @@
 .testimonials__avatar - аватар клиента
 
 */
+
+/* Основная секция отзывов */
+.testimonials {
+    padding: 60px 0;
+    background-color: var(--color-bg-primary);
+}
+
+/* Шапка с заголовком и рейтингом */
+.testimonials__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    gap: 40px;
+}
+
+/* Левая часть - информация */
+.testimonials__info {
+    flex: 1;
+    max-width: 600px;
+}
+
+.testimonials__title {
+    text-align: left;
+}
+
+.testimonials__description {
+    font-size: 1.125rem;
+    color: var(--color-text-tertiary);
+    line-height: 1.6;
+}
+
+/* Правая часть - рейтинг */
+.testimonials__rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 200px;
+}
+
+.testimonials__score {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 8px;
+}
+
+.testimonials__stars {
+    font-size: 1.5rem;
+    color: #FFD700;
+    margin-bottom: 8px;
+}
+
+.testimonials__reviews-count {
+    font-size: 0.875rem;
+    color: var(--color-text-tertiary);
+    margin-bottom: 16px;
+}
+
+.testimonials__yandex-logo {
+    width: 200px;
+    height: 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Контейнер карусели отзывов */
+.testimonials__carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Список отзывов - карусель */
+.testimonials__list {
+    display: flex;
+    transition: transform 0.3s ease;
+    gap: 24px;
+}
+
+/* Слайд карусели (2 карточки) */
+.testimonials__slide {
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+/* Карточка отзыва */
+.testimonials__item {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.testimonials__item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Шапка карточки с аватаром и информацией */
+.testimonials__item-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    gap: 12px;
+}
+
+/* Аватар клиента */
+.testimonials__avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.testimonials__avatar-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Информация о клиенте */
+.testimonials__item-info {
+    flex: 1;
+}
+
+.testimonials__name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 4px;
+}
+
+.testimonials__item .testimonials__stars {
+    font-size: 0.875rem;
+    color: #FFD700;
+    margin-bottom: 4px;
+}
+
+.testimonials__date {
+    font-size: 0.75rem;
+    color: var(--color-text-tertiary);
+}
+
+/* Текст отзыва */
+.testimonials__text {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--color-text-secondary);
+}
+
+/* Адаптивность для планшетов */
+@media (max-width: 1024px) {
+    .testimonials {
+        padding: 50px 0;
+    }
+
+    .testimonials__container {
+        padding: 0 16px;
+    }
+
+    .testimonials__header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    .testimonials__title {
+        font-size: 2rem;
+    }
+
+    .testimonials__description {
+        font-size: 1rem;
+    }
+
+    .testimonials__list {
+        gap: 20px;
+    }
+
+    .testimonials__slide {
+        gap: 20px;
+    }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 640px) {
+    .testimonials {
+        padding: 40px 0;
+    }
+
+    .testimonials__title {
+        font-size: 1.75rem;
+    }
+
+    .testimonials__score {
+        font-size: 2.5rem;
+    }
+
+    .testimonials__list {
+        gap: 16px;
+    }
+
+    .testimonials__slide {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .testimonials__item {
+        padding: 20px;
+    }
+
+    .testimonials__yandex-logo {
+        width: 80px;
+        height: 32px;
+    }
+}
+
+/* Навигация карусели */
+.testimonials__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+/* Стрелки навигации */
+.testimonials__arrow {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--color-section-bg);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease;
+}
+
+.testimonials__arrow:hover {
+    opacity: 0.8;
+}
+
+.testimonials__arrow:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.testimonials__arrow svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+}
+
+/* Индикаторы (точки) */
+.testimonials__indicators {
+    display: flex;
+    gap: 8px;
+}
+
+.testimonials__indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ccc;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.testimonials__indicator--active {
+    background-color: var(--color-section-bg);
+}
+
+.testimonials__indicator:hover {
+    background-color: var(--color-section-bg);
+    opacity: 0.8;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 640px) {
+    .testimonials__navigation {
+        margin-top: 24px;
+        gap: 12px;
+    }
+
+    .testimonials__arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .testimonials__arrow svg {
+        width: 20px;
+        height: 20px;
+    }
+}
