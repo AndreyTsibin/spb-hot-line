@@ -203,7 +203,7 @@ function initTestimonialsCarousel() {
 
     // Функция обновления карусели
     function updateCarousel() {
-        const translateX = -currentSlide * 100;
+        const translateX = -currentSlide * 33.333; // Используем 33.333% для каждого слайда
         list.style.transform = `translateX(${translateX}%)`;
 
         // Обновляем индикаторы
